@@ -122,27 +122,61 @@ img {
   margin-right: 50px;
 }
 
+/* *Стилизация мейла и телефона */
+
+.auth-nav .item-auth .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--paragraph-text-color);
+}
+
+.auth-nav .item-auth:not(:last-child) {
+  margin-right: 30px;
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
 .auth-nav .link {
   color: var(--paragraph-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  display: block;
 }
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-colour);
+  fill: var(--accent-colour);
 }
 
 /* *Hero */
-.hero-section {
-  background-color: #2f303a;
-  text-align: center;
+.hero-overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
+
+  background-color: #2f303a;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* *Основоной заголовок */
@@ -179,8 +213,8 @@ img {
 .button-hero:hover,
 .button-hero:focus,
 .button-hero:active {
-  background-color: var(--hero-addres-button-text-color);
-  color: var(--accent-colour);
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* *Секция Особенности */
@@ -194,6 +228,19 @@ img {
 
 .features-list .list {
   width: 270px;
+}
+
+.antenna,
+.clock,
+.diagram,
+.astronaut {
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  padding: 25px 100px;
+
+  margin-bottom: 30px;
 }
 
 .features-list .list:not(:last-child) {
@@ -245,14 +292,14 @@ img {
   display: flex;
 }
 
-.our-team-list li {
+.our-team-list .list {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team-list li:not(:last-child) {
+.our-team-list .list:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -275,7 +322,64 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
+
+/* *Иконки соцсетей*/
+.list-social-networks {
+  display: inline-flex;
+  list-style: none;
+  fill: #afb1b8;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.cards .link {
+  display: flex;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-social-networks .cards:not(:last-child) {
+  margin-right: 10px;
+}
+
+.cards .link:hover,
+.cards .link:focus,
+.cards .link:active {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+
+/* *Постоянные клиенты */
+.main-customers-title {
+  color: var(--general-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.list-customers {
+  display: inline-flex;
+  
+}
+
+.list-customers .customer .company {
+  width: 170px;
+  height: 92px;
+}
+
+
+
+
+
 
 /* *Footer стилизация */
 .footer {
