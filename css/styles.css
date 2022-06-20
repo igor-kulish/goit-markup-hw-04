@@ -329,7 +329,6 @@ img {
 .list-social-networks {
   display: inline-flex;
   list-style: none;
-  fill: #afb1b8;
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -342,6 +341,7 @@ img {
   background-color: inherit;
   align-items: center;
   justify-content: center;
+  fill: #afb1b8;
 }
 
 .list-social-networks .cards:not(:last-child) {
@@ -368,24 +368,47 @@ img {
 
 .list-customers {
   display: inline-flex;
-  
 }
 
-.list-customers .customer .company {
+.customer:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customer-link {
+  display: flex;
   width: 170px;
   height: 92px;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
-
-
-
-
+.list-customers .customer-link:hover,
+.list-customers .customer-link:focus,
+.list-customers .customer-link:active {
+  fill: var(--accent-colour);
+  border: 1px solid var(--accent-colour);
+}
 
 /* *Footer стилизация */
 .footer {
   background-color: var(--footer-background-color);
+}
+
+.footer .container {
+  display: inline-flex;
+}
+
+.footer-first.join {
+  display: flex;
+}
+
+.footer-first {
   padding-top: 60px;
   padding-bottom: 60px;
+  padding-left: 215px;
 }
 
 .footer-logo {
@@ -442,6 +465,47 @@ img {
 .footer-auth .link-footer:hover,
 .footer-auth .link-footer:focus {
   color: var(--accent-colour);
+}
+
+.join {
+  margin-left: 70px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.join-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-addres-button-text-color);
+  margin-bottom: 20px;
+}
+
+.join-list {
+  display: inline-flex;
+}
+
+.join-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  fill: var(--hero-addres-button-text-color);
+}
+
+.join-list .list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-link:hover,
+.join-link:focus,
+.join-link:active {
+  background-color: var(--accent-colour);
 }
 
 /* *Portfolio стилизация */
@@ -528,4 +592,10 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+  color: var(--paragraph-text-color);
+}
+
+.card-portfolio:hover,
+.card-portfolio:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
