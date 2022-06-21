@@ -230,16 +230,13 @@ img {
   width: 270px;
 }
 
-.antenna,
-.clock,
-.diagram,
-.astronaut {
-  display: block;
+.list-picture {
+  display: flex;
   width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
-  padding: 25px 100px;
-
+  background-color: var(--portfolio-button-background);
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
