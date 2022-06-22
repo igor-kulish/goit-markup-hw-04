@@ -392,21 +392,18 @@ img {
 /* *Footer стилизация */
 .footer {
   background-color: var(--footer-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .container {
-  display: inline-flex;
+  display: flex;
 }
 
 .footer-first.join {
   display: flex;
 }
 
-.footer-first {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-left: 215px;
-}
 
 .footer-logo {
   color: var(--accent-colour);
@@ -466,8 +463,7 @@ img {
 
 .join {
   margin-left: 70px;
-  padding-top: 72px;
-  padding-bottom: 100px;
+  padding-top: 12px;
 }
 
 .join-title {
@@ -481,7 +477,7 @@ img {
 }
 
 .join-list {
-  display: inline-flex;
+  display: flex;
 }
 
 .join-link {
